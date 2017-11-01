@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>@ViewBag.Titulo</title>
+
+</head>
+<body>
+    <div>
+        @RenderSection("Cabeçalho", false)
+        @Html.Partial("_Menu")
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+
+    </div>
+
+    <div>
+        @RenderSection("Rodapé", false)
+    </div>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Home","Index","Aluno")</li>
+                            <li>@Html.ActionLink("About", "Sobre", "Aluno")</li>
+
+                        </ul>
+
+                    </div>
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>
+
+
+</html>
